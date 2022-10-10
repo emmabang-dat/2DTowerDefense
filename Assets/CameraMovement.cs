@@ -18,6 +18,9 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
+        if (Input.GetAxis("Mouse ScrollWheel") < 0) GetComponent<Camera>().orthographicSize++;
+        else if (Input.GetAxis("Mouse ScrollWheel") > 0) GetComponent<Camera>().orthographicSize--;
+
         if (Input.GetMouseButton(0))
         {
             difference = (Camera.main.ScreenToWorldPoint(Input.mousePosition)) - Camera.main.transform.position;
