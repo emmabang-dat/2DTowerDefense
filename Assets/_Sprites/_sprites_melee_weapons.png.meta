@@ -668,12 +668,11 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       _sprites_melee_weapons_6: 4790044796839068890
-      _sprites_melee_weapons_13: -8888456197520120734
-      _sprites_melee_weapons_1: 3711637644024434224
       _sprites_melee_weapons_15: -8491222336511085509
+      _sprites_melee_weapons_1: 3711637644024434224
+      _sprites_melee_weapons_3: 1972671395934027867
       _sprites_melee_weapons_20: -2604378449648327165
       _sprites_melee_weapons_0: -1949118151123902214
-      _sprites_melee_weapons_11: 3423540028061366507
       _sprites_melee_weapons_19: -8370283274568261479
       _sprites_melee_weapons_18: 5567617834280081534
       _sprites_melee_weapons_12: -676015613372804901
@@ -682,12 +681,13 @@ TextureImporter:
       _sprites_melee_weapons_4: 4654193933628500797
       _sprites_melee_weapons_16: -5143735060634138432
       _sprites_melee_weapons_2: 1705768306203154712
-      _sprites_melee_weapons_5: 2035668255479547658
+      _sprites_melee_weapons_11: 3423540028061366507
       _sprites_melee_weapons_7: 5029690672129104168
-      _sprites_melee_weapons_10: -8187317486123485221
+      _sprites_melee_weapons_5: 2035668255479547658
       _sprites_melee_weapons_8: 8960695750413644764
+      _sprites_melee_weapons_10: -8187317486123485221
       _sprites_melee_weapons_9: -3111031514113982298
-      _sprites_melee_weapons_3: 1972671395934027867
+      _sprites_melee_weapons_13: -8888456197520120734
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
