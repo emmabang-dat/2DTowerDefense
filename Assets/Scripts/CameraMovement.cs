@@ -51,9 +51,10 @@ public class CameraMovement : MonoBehaviour
             Camera.main.transform.position = origin - difference;
         }
 
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(2)) //middle mouse button click
         {
-            Camera.main.transform.position = resetCamera;
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            Camera.main.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10);
         }
     }
 }

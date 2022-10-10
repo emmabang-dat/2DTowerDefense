@@ -2080,7 +2080,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      _sprites_heroes_69: 3409191816681065986
       _sprites_heroes_8: -1770128653110521830
       _sprites_heroes_14: 8699866753767195459
       _sprites_heroes_24: -7844297003682464235
@@ -2102,6 +2101,7 @@ TextureImporter:
       _sprites_heroes_16: 2348695063744993788
       _sprites_heroes_34: 8502183243949274773
       _sprites_heroes_44: 6062714789553543176
+      _sprites_heroes_71: 6144461099409619946
       _sprites_heroes_29: 9035351479130094104
       _sprites_heroes_9: -5309872339185856328
       _sprites_heroes_49: 8976088567547731331
@@ -2113,12 +2113,11 @@ TextureImporter:
       _sprites_heroes_53: 8340643421899330165
       _sprites_heroes_56: -4723088487435204151
       _sprites_heroes_4: 2084476045944145930
-      _sprites_heroes_60: 1827940119490937354
+      _sprites_heroes_65: -1543584514040341714
       _sprites_heroes_33: -3817483756313480796
       _sprites_heroes_40: -3643867629388005748
+      _sprites_heroes_60: 1827940119490937354
       _sprites_heroes_68: 3017160120036121763
-      _sprites_heroes_65: -1543584514040341714
-      _sprites_heroes_71: 6144461099409619946
       _sprites_heroes_46: -3451915853022476166
       _sprites_heroes_15: -3260878776702699404
       _sprites_heroes_66: -294964743442570327
@@ -2126,11 +2125,12 @@ TextureImporter:
       _sprites_heroes_37: 368520392874549566
       _sprites_heroes_11: 5660049267425342817
       _sprites_heroes_19: 1199450332996084022
-      _sprites_heroes_45: 3427834622194971515
+      _sprites_heroes_69: 3409191816681065986
       _sprites_heroes_41: -764691175595483773
       _sprites_heroes_27: -2252652819362581166
-      _sprites_heroes_28: -3297324289073312496
+      _sprites_heroes_45: 3427834622194971515
       _sprites_heroes_42: 1856075876382247289
+      _sprites_heroes_28: -3297324289073312496
       _sprites_heroes_43: 9060992422839872614
       _sprites_heroes_1: 7099416267201676946
       _sprites_heroes_47: 2358958987539826765
