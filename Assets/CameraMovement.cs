@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,19 +9,29 @@ public class CameraMovement : MonoBehaviour
     private Vector3 difference;
     private Vector3 resetCamera;
 
+    private Camera myCamera;
+    private float targetZoom;
+    private float zoomFactor = 3f;
+
     private bool drag = false;
 
     void Start()
     {
+        myCamera = Camera.main;
+        targetZoom = myCamera.orthographicSize;
         resetCamera = Camera.main.transform.position;
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        if (Input.GetAxis("Mouse ScrollWheel") < 0) GetComponent<Camera>().orthographicSize++;
-        else if (Input.GetAxis("Mouse ScrollWheel") > 0) GetComponent<Camera>().orthographicSize--;
+        //Implementation of zoom
+        float scrollData = Input.GetAxis("Mouse ScrollWheel");
+        targetZoom -= scrollData * zoomFactor;
+        targetZoom = Mathf.Clamp(targetZoom, 2f, 6f);
+        myCamera.orthographicSize = Mathf.Lerp(myCamera.orthographicSize, targetZoom, Time.deltaTime * 10f);
 
+        //Implementation of camera dragging
         if (Input.GetMouseButton(0))
         {
             difference = (Camera.main.ScreenToWorldPoint(Input.mousePosition)) - Camera.main.transform.position;
