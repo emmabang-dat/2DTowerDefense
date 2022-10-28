@@ -320,7 +320,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -2385,9 +2385,9 @@ TextureImporter:
       _sprites_map_26: 7358558082640735652
       _sprites_map_63: 5491810109368231844
       _sprites_map_48: -2100795814140181850
+      _sprites_map_46: 7800402667792206885
       _sprites_map_57: 3865523136577758233
       _sprites_map_77: 4957114929175219481
-      _sprites_map_46: 7800402667792206885
       _sprites_map_64: 2870633998382647343
       _sprites_map_87: -7411715157331503257
       _sprites_map_81: 1930003640290482719
