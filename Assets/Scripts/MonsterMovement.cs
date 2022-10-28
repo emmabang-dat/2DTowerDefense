@@ -20,7 +20,14 @@ public class MonsterMovement : MonoBehaviour
 
         if (Vector2.Distance(transform.position, waypoints.waypoints[waypointIndex].position) < 0.1f)
         {
-            waypointIndex++;
+            if (waypointIndex < waypoints.waypoints.Length - 1)
+            {
+                waypointIndex++;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
