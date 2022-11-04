@@ -318,11 +318,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7492683515906499154, guid: 5df14c06c1fe54a4db9aae8753e81d78, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.84
+      value: -8.37
       objectReference: {fileID: 0}
     - target: {fileID: 7492683515906499154, guid: 5df14c06c1fe54a4db9aae8753e81d78, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.3
+      value: -1.93
       objectReference: {fileID: 0}
     - target: {fileID: 7492683515906499154, guid: 5df14c06c1fe54a4db9aae8753e81d78, type: 3}
       propertyPath: m_LocalPosition.z
@@ -433,8 +433,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1638593041
-  m_SortingLayer: -1
+  m_SortingLayerID: -1949121107
+  m_SortingLayer: 1
   m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -8312,7 +8312,9 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -9.002052, y: -3.025055}
+  - {x: -9.002052, y: -2.9720688}
+  - {x: -8.52763, y: -2.599444}
+  - {x: -8.085701, y: -2.5915837}
   - {x: -7.6565766, y: -3.0075383}
   - {x: -7.6103735, y: 2.610826}
   - {x: -2.3455575, y: 2.6160471}
@@ -8549,8 +8551,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1638593041
-  m_SortingLayer: -1
+  m_SortingLayerID: -1949121107
+  m_SortingLayer: 1
   m_SortingOrder: 4
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
