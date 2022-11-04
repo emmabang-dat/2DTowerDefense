@@ -48,7 +48,10 @@ public class CameraMovement : MonoBehaviour
 
         if (drag)
         {
-            Camera.main.transform.position = origin - difference;
+            Vector3 tempCamPos = origin - difference;
+            tempCamPos.x = Mathf.Clamp(tempCamPos.x, -9.5f, 6f);
+            tempCamPos.y = Mathf.Clamp(tempCamPos.y, -9.6f, 10.7f);
+            Camera.main.transform.position = tempCamPos;
         }
 
         if (Input.GetMouseButton(2)) //middle mouse button click

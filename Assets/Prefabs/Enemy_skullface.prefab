@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7332653742780883389}
   - component: {fileID: 7332653742780883386}
   - component: {fileID: 7332653742780883387}
+  - component: {fileID: -8962742278710295666}
   m_Layer: 0
   m_Name: Enemy_skullface
   m_TagString: Enemy
@@ -97,7 +98,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.055667102, y: 0.0101210475}
@@ -154,3 +155,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-8962742278710295666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7332653742780883384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e0c89e70cd69894487428b3456fd247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 2
