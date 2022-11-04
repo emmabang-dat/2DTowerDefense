@@ -8,6 +8,7 @@ TagManager:
   - Waypoints
   - Path
   - Background
+  - EnemyRespawn
   layers:
   - Default
   - TransparentFX
