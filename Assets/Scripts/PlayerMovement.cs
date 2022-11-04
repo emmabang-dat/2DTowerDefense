@@ -30,4 +30,12 @@ public class PlayerMovement : MonoBehaviour
     {
         mybody.MovePosition(mybody.position + movement * movementSpeed * Time.fixedDeltaTime);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            Enemy _enemy = collision.gameObject.GetComponent<Enemy>();
+            _enemy.ApplyDamage(5);
+        }
+    }
 }

@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public int CurrentHealth { get; private set; }
+    public int MaxHealth;
 
-    public int CurrentHealth;
+    public bool movementFlipped;
 
     public float Speed;
     private Waypoints waypoints;
@@ -31,12 +33,12 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
-        CurrentHealth = 0;
         Destroy(gameObject);
     }
 
     void Start()
     {
+        CurrentHealth = MaxHealth;
         waypoints = GameObject.FindGameObjectWithTag("Waypoints").GetComponent<Waypoints>();
     }
 
@@ -60,7 +62,24 @@ public class Enemy : MonoBehaviour
     void FixedUpdate()
     {
         if (waypoints.waypoints[waypointIndex].position.x < transform.position.x)
-            transform.localScale = new Vector3(-System.Math.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z); //flip the enemys forward
-        else transform.localScale = new Vector3(System.Math.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z); //flip the enemys forward
+        {
+            movementFlipped = true;
+        }
+        else
+        {
+            movementFlipped = false;
+        }
+
+        if (movementFlipped)
+        {
+            transform.localScale = new Vector3(-System.Math.Abs(transform.localScale.x), transform.localScale.y,
+                transform.localScale.z); //flip the enemys forward
+        }
+        else
+        {
+            transform.localScale = new Vector3(System.Math.Abs(transform.localScale.x), transform.localScale.y,
+                transform.localScale.z); //flip the enemys forward
+        }
+
     }
 }
