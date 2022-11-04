@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public int CurrentHealth { get; private set; }
+
+    public int CurrentHealth;
 
     public float Speed;
     private Waypoints waypoints;
@@ -21,6 +22,11 @@ public class Enemy : MonoBehaviour
         {
             CurrentHealth -= damage;
         }
+    }
+
+    public void ApplySpeed(float speed)
+    {
+        Mathf.Clamp(Speed = Speed + speed, 0.5f, 2f);
     }
 
     private void Die()
@@ -54,7 +60,7 @@ public class Enemy : MonoBehaviour
     void FixedUpdate()
     {
         if (waypoints.waypoints[waypointIndex].position.x < transform.position.x)
-            transform.localScale = new Vector3(-0.3f, 0.3f, 0.3f); //flip the enemys forward
-        else transform.localScale = new Vector3(0.3f, 0.3f, 0.3f); //flip the enemys forward
+            transform.localScale = new Vector3(-System.Math.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z); //flip the enemys forward
+        else transform.localScale = new Vector3(System.Math.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z); //flip the enemys forward
     }
 }
