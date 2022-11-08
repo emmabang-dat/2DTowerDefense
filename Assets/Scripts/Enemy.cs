@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -14,8 +15,11 @@ public class Enemy : MonoBehaviour
 
     private int waypointIndex;
 
+    
+
     public void ApplyDamage(int damage)
     {
+        
         if (damage >= CurrentHealth)
         {
             Die();
@@ -44,7 +48,7 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, waypoints.waypoints[waypointIndex].position, Speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, waypoints.waypoints[waypointIndex].position, Speed * Time.deltaTime);
 
         if (Vector2.Distance(transform.position, waypoints.waypoints[waypointIndex].position) < 0.1f)
         {
