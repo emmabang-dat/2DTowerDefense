@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Gold.asset.meta
 guid: 5473cb1e171100147986b21bb0555153
 NativeFormatImporter:
+========
+guid: 107e47736dcb7f341bad471902bf8875
+DefaultImporter:
+>>>>>>>> 86d9418553261d82e4c3e4504d85e6db709d7aa0:Assets/Scenes/MainMenu.unity.meta
   externalObjects: {}
   mainObjectFileID: 11400000
   userData: 
