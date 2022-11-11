@@ -29,7 +29,7 @@ public class Bullet : MonoBehaviour
 
         if (dir.magnitude <= distanceThisFrame)
         {
-            HitTarget();
+            //HitTarget();
             return;
         }
 
@@ -37,11 +37,21 @@ public class Bullet : MonoBehaviour
 
     }
 
-    void HitTarget()
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            Enemy _enemy = collision.gameObject.GetComponent<Enemy>();
+            _enemy.ApplyDamage(5);
+            Destroy(gameObject);
+        }
+    }
+
+    /*void HitTarget()
     {
         GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(effectIns, 2f);
-
         Destroy(gameObject);
     }
+    */
 }
