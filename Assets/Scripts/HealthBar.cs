@@ -26,7 +26,7 @@ public class HealthBar : MonoBehaviour
             float healthPercent = (_enemy.CurrentHealth * 1f) / _enemy.MaxHealth;
             _image.fillAmount = healthPercent;
 
-            Debug.Log(healthPercent);
+            
 
             if (_enemy.movementFlipped)
             {

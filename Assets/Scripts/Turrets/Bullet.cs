@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
 
     public float speed = 8f;
     public GameObject impactEffect;
+    public int damage = 10;
 
   
     public void Seek(Transform _target)
@@ -42,7 +43,7 @@ public class Bullet : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             Enemy _enemy = collision.gameObject.GetComponent<Enemy>();
-            _enemy.ApplyDamage(5);
+            _enemy.ApplyDamage(damage);
             Destroy(gameObject);
         }
     }

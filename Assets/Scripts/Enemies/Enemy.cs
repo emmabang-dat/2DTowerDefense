@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
         
         if (damage >= CurrentHealth)
         {
-            Die();
+            Destroy(gameObject);
         }
         else
         {
@@ -35,10 +35,6 @@ public class Enemy : MonoBehaviour
         Mathf.Clamp(Speed = Speed + speed, 0.5f, 2f);
     }
 
-    private void Die()
-    {
-        Destroy(gameObject);
-    }
 
     void Start()
     {
@@ -58,8 +54,11 @@ public class Enemy : MonoBehaviour
             }
             else
             {
-                Die();
+                Destroy(gameObject);
+                PlayerStats playerStats = GameObject.FindGameObjectWithTag("GameController").GetComponent<PlayerStats>();
+                playerStats.Lives -= 1; 
             }
+
         }
     }
 

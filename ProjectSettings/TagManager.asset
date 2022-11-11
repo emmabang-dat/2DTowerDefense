@@ -9,6 +9,7 @@ TagManager:
   - Path
   - Background
   - EnemyRespawn
+  - HealthControllerUi
   layers:
   - Default
   - TransparentFX
