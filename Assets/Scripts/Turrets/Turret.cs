@@ -6,6 +6,7 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
     private Transform target;
+    public int damage = 10;
 
     [Header("Attributes")]
 
@@ -18,7 +19,7 @@ public class Turret : MonoBehaviour
     public string enemyTag = "Enemy";
 
     public GameObject bulletPrefab;
-    public Transform firePoint; 
+    public Transform firePoint;
 
 
 
@@ -33,8 +34,10 @@ public class Turret : MonoBehaviour
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
 
+        if (enemies.Length == 0 || enemies == null) return;
+
         float shortestDistance = Mathf.Infinity;
-        GameObject nearestEnemy = null; 
+        GameObject nearestEnemy = null;
 
         foreach (GameObject enemy in enemies)
         {
@@ -50,6 +53,10 @@ public class Turret : MonoBehaviour
         {
             target = nearestEnemy.transform;
         }
+        else
+        {
+            target = null;
+        }
     }
 
     // Update is called once per frame
@@ -57,7 +64,7 @@ public class Turret : MonoBehaviour
     {
         if (target == null)
             return;
-        
+
         if (fireCountdown <= 0f)
         {
             Shoot();
@@ -71,6 +78,7 @@ public class Turret : MonoBehaviour
     {
         GameObject BulletGo = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Bullet bullet = BulletGo.GetComponent<Bullet>();
+        bullet.damage = damage;
 
         if (bullet != null)
         {
@@ -78,7 +86,7 @@ public class Turret : MonoBehaviour
         }
     }
 
-    
+
 
     void OnDrawGizmosSelected()
     {
