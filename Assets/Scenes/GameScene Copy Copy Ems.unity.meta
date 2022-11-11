@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<< Updated upstream
+<<<<<<<< HEAD:Assets/Scenes/MainMenu.unity.meta
+guid: 51a05c045901b3d41959c7ac446d9450
+========
+guid: 955824b8186ccdc4d8a8285e298f60c0
+>>>>>>>> 86d9418553261d82e4c3e4504d85e6db709d7aa0:Assets/Scenes/GameScene Copy.unity.meta
+=======
+guid: 673a6e70062ba6641b70189a312e983b
+>>>>>>> Stashed changes
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
