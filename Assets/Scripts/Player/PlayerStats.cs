@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
 
-    public int Money; 
+    public int Money;
     public int startMoney = 400;
 
     public int Lives;
@@ -24,5 +24,11 @@ public class PlayerStats : MonoBehaviour
     void Update()
     {
         livesUI.lives = Lives;
+        if (Lives <= 0)
+        {
+            Time.timeScale = 0f;
+            //GameObject gameOver = GameObject.FindGameObjectWithTag("GameOver");
+            //gameOver.SetActive(true);
+        }
     }
 }
