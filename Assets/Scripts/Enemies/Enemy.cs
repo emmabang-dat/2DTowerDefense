@@ -16,8 +16,10 @@ public class Enemy : MonoBehaviour
     private int waypointIndex;
 
     public int moneyValue;
+    public int scoreValue;
 
     private PlayerStats playerStats;
+    private ScoreUI scoreUI;
 
     public void ApplyDamage(int damage)
     {
@@ -25,6 +27,7 @@ public class Enemy : MonoBehaviour
         if (damage >= CurrentHealth)
         {
             playerStats.Money += moneyValue;
+            playerStats.Score += scoreValue;
             Destroy(gameObject);
         }
         else
@@ -44,6 +47,7 @@ public class Enemy : MonoBehaviour
         CurrentHealth = MaxHealth;
         waypoints = GameObject.FindGameObjectWithTag("Waypoints").GetComponent<Waypoints>();
         playerStats = GameObject.FindGameObjectWithTag("GameController").GetComponent<PlayerStats>();
+        scoreUI = GameObject.FindGameObjectWithTag("ScoreControllerUi").GetComponent<ScoreUI>();
     }
 
     void Update()

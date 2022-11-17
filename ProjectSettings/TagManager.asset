@@ -11,6 +11,7 @@ TagManager:
   - EnemyRespawn
   - HealthControllerUi
   - MoneyControllerUi
+  - ScoreControllerUi
   layers:
   - Default
   - TransparentFX

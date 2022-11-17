@@ -358,6 +358,7 @@ MonoBehaviour:
   movementFlipped: 0
   Speed: 0.8
   moneyValue: 150
+  scoreValue: 4
 --- !u!1001 &3638245979723019399
 PrefabInstance:
   m_ObjectHideFlags: 0
