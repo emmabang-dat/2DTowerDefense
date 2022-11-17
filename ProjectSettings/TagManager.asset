@@ -43,7 +43,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - UI real
   - 
   m_SortingLayers:
   - name: Background
@@ -54,4 +54,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2345846189
+    locked: 0
+  - name: UI
+    uniqueID: 275552025
     locked: 0

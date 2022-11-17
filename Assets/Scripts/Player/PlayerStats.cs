@@ -37,8 +37,6 @@ public class PlayerStats : MonoBehaviour
         if (Lives <= 0)
         {
             Time.timeScale = 0f;
-            //GameObject gameOver = GameObject.FindGameObjectWithTag("GameOver");
-            //gameOver.SetActive(true);
         }
     }
 }
