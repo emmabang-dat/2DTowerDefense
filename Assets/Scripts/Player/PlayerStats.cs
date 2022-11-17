@@ -20,12 +20,12 @@ public class PlayerStats : MonoBehaviour
         Lives = startLives;
         livesUI = GameObject.FindGameObjectWithTag("HealthControllerUi").GetComponent<LivesUI>();
         moneyUI = GameObject.FindGameObjectWithTag("MoneyControllerUi").GetComponent<MoneyUI>();
-        moneyUI.money = startMoney;
     }
 
     // Update is called once per frame
     void Update()
     {
+        moneyUI.money = Money;
         livesUI.lives = Lives;
         if (Lives <= 0)
         {

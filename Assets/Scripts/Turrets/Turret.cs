@@ -22,12 +22,17 @@ public class Turret : MonoBehaviour
     public Transform firePoint;
 
 
+    public BuildableLandHandler buildableLand;
+    private PlayerStats playerStats;
+
+
 
 
     // Start is called before the first frame update
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
+        playerStats = GameObject.FindGameObjectWithTag("GameController").GetComponent<PlayerStats>();
     }
 
     void UpdateTarget()
@@ -83,6 +88,16 @@ public class Turret : MonoBehaviour
         if (bullet != null)
         {
             bullet.Seek(target);
+        }
+    }
+
+    private void OnMouseOver()
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            playerStats.Money += 200;
+            Instantiate(buildableLand, transform.position, Quaternion.identity);
+            Destroy(gameObject);
         }
     }
 
