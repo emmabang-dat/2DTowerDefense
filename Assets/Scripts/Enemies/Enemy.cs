@@ -15,13 +15,16 @@ public class Enemy : MonoBehaviour
 
     private int waypointIndex;
 
-    
+    public int moneyValue;
+
+    private PlayerStats playerStats;
 
     public void ApplyDamage(int damage)
     {
         
         if (damage >= CurrentHealth)
         {
+            playerStats.Money += moneyValue;
             Destroy(gameObject);
         }
         else
@@ -40,6 +43,7 @@ public class Enemy : MonoBehaviour
     {
         CurrentHealth = MaxHealth;
         waypoints = GameObject.FindGameObjectWithTag("Waypoints").GetComponent<Waypoints>();
+        playerStats = GameObject.FindGameObjectWithTag("GameController").GetComponent<PlayerStats>();
     }
 
     void Update()

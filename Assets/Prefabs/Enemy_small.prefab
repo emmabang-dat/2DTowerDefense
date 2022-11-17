@@ -357,6 +357,7 @@ MonoBehaviour:
   MaxHealth: 50
   movementFlipped: 0
   Speed: 1
+  moneyValue: 50
 --- !u!1001 &8336867979611736475
 PrefabInstance:
   m_ObjectHideFlags: 0
