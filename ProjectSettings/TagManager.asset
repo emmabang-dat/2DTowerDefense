@@ -10,6 +10,7 @@ TagManager:
   - Background
   - EnemyRespawn
   - HealthControllerUi
+  - MoneyControllerUi
   layers:
   - Default
   - TransparentFX

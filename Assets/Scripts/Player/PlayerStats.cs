@@ -11,6 +11,7 @@ public class PlayerStats : MonoBehaviour
     public int Lives;
     public int startLives = 20;
     private LivesUI livesUI;
+    private MoneyUI moneyUI;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,8 @@ public class PlayerStats : MonoBehaviour
         Money = startMoney;
         Lives = startLives;
         livesUI = GameObject.FindGameObjectWithTag("HealthControllerUi").GetComponent<LivesUI>();
+        moneyUI = GameObject.FindGameObjectWithTag("MoneyControllerUi").GetComponent<MoneyUI>();
+        moneyUI.money = startMoney;
     }
 
     // Update is called once per frame

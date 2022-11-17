@@ -4,10 +4,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LivesUI : MonoBehaviour
+public class MoneyUI : MonoBehaviour
 {
     private TextMeshPro font;
-    public int lives; 
+    public int money; 
 
     void Start()
     {
@@ -17,6 +17,6 @@ public class LivesUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
-        font.text = $"{lives} lives";   
+        font.text = $"${money}";   
     }
 }
