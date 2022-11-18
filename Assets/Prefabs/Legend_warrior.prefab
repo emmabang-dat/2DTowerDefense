@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7492683515906499157}
   - component: {fileID: 7492683515906499152}
   - component: {fileID: 7492683515906499153}
+  - component: {fileID: 69146849}
   m_Layer: 0
   m_Name: Legend_warrior
   m_TagString: Player
@@ -171,3 +172,15 @@ MonoBehaviour:
   mybody: {fileID: 7492683515906499152}
   myAnimator: {fileID: 7492683515906499157}
   myRenderer: {fileID: 7492683515906499155}
+--- !u!114 &69146849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492683515906499158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb6093c0c28b30640ac0c23f7a57d8c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

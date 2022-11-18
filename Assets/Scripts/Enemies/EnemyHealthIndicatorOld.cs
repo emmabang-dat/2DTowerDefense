@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class EnemyHealthIndicator : MonoBehaviour
+public class EnemyHealthIndicatorOld : MonoBehaviour
 {
     private TextMeshPro _text;
 

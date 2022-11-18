@@ -1,38 +1,47 @@
 ﻿using
 	System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    private float _cooldown;
 
-	
- //   public int maxHealth = 100;
-	//public int currentHealth;
+	void Update()
+    {
+        if (Input.GetButtonDown("Jump"))
+        {
+            SpinAttack(5, 10, 1);
+        }
+    }
 
-	//public HealthBar healthBar;
+    private void SpinAttack(float range, int damage, float cooldown)
+    {
+        if (Time.time < _cooldown) return;
 
- //   // Start is called before the first frame update
- //   void Start()
- //   {
-	//	currentHealth = maxHealth;
-	//	healthBar.SetMaxHealth(maxHealth);
- //   }
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        List<GameObject> validEnemies = new List<GameObject>();
+        if (!enemies.Any()) return;
 
- //   // Update is called once per frame
- //   void Update()
- //   {
-	//	if (Input.GetKeyDown(KeyCode.Space))
-	//	{
-	//		TakeDamage(20);
-	//	}
- //   }
+        foreach (GameObject enemy in enemies)
+        {
+            float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
+            if (distanceToEnemy < range)
+            {
+                validEnemies.Add(enemy);
+            }
+        }
 
-	//void TakeDamage(int damage)
-	//{
-	//	currentHealth -= damage;
+        if (validEnemies.Any())
+        {
+            foreach (GameObject enemy in validEnemies)
+            {
+                enemy.GetComponent<Enemy>().ApplyDamage(damage);
+            }
 
-	//	healthBar.SetHealth(currentHealth);
-	//}
-	
+            _cooldown = Time.time + cooldown;
+        }
+
+    }
 }
